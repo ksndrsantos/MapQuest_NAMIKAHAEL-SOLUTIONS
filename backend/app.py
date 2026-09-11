@@ -214,7 +214,8 @@ def route():
         }), 502
 
     # Handle unexpected backend errors.
-    except Exception:
+    except Exception as error:
+        print("ERROR:", error)
 
         return jsonify({
             "error": (
