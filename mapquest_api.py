@@ -1,8 +1,9 @@
 import urllib.parse
 import requests
+from config import MAPQUEST_API_KEY
 
 main_api = "https://www.mapquestapi.com/directions/v2/route?"
-key = "EGVIJZBu6OlzjazQolRueK1VFVfoi30D"  
+key = MAPQUEST_API_KEY
 
 while True:
     orig = input("Starting Location: ")
