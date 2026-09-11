@@ -3,6 +3,16 @@ import os
 import requests
 from dotenv import load_dotenv
 
+# Get the directory where this Python file is located.
+BASE_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
+
+# Load the .env file located inside the backend folder.
+ENV_PATH = os.path.join(
+    BASE_DIR,
+    ".env"
+)
 
 # Load environment variables from the .env file
 load_dotenv()
