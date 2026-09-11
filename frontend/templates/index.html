@@ -21,12 +21,17 @@
             <p>Find route information between two locations.</p>
         </header>
 
+        <!-- Route input section -->
         <section class="route-card">
 
-            <form>
+            <form id="route-form">
 
+                <!-- Starting location -->
                 <div class="form-group">
-                    <label for="origin">Starting Location</label>
+                    <label for="origin">
+                        Starting Location
+                    </label>
+
                     <input
                         type="text"
                         id="origin"
@@ -35,8 +40,12 @@
                     >
                 </div>
 
+                <!-- Destination -->
                 <div class="form-group">
-                    <label for="destination">Destination</label>
+                    <label for="destination">
+                        Destination
+                    </label>
+
                     <input
                         type="text"
                         id="destination"
@@ -45,6 +54,19 @@
                     >
                 </div>
 
+                <!-- Distance unit -->
+                <div class="form-group">
+                    <label for="unit">
+                        Distance Unit
+                    </label>
+
+                    <select id="unit" name="unit">
+                        <option value="m">Miles</option>
+                        <option value="k">Kilometers</option>
+                    </select>
+                </div>
+
+                <!-- Submit button -->
                 <button type="submit">
                     Find Route
                 </button>
@@ -53,8 +75,18 @@
 
         </section>
 
+        <!-- Route results will appear here -->
+        <section
+            id="route-results"
+            class="route-results"
+        ></section>
+
     </main>
+
+    <!-- JavaScript for frontend-backend communication -->
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
 
 </body>
 </html>
-
